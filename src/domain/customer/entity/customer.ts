@@ -1,6 +1,6 @@
 import { Address } from "../value-object/address";
 
-export  class Customer {
+export class Customer {
   private _id: string;
   private _name: string = "";
   private _address!: Address;
@@ -20,7 +20,9 @@ export  class Customer {
   get name(): string {
     return this._name;
   }
-
+  get rewardPoints(): number {
+    return this._rewardPoints;
+  }
   validate() {
     if (this._id.length === 0) {
       throw new Error("Id is required");
@@ -59,5 +61,4 @@ export  class Customer {
   set Address(address: Address) {
     this._address = address;
   }
-
 }
