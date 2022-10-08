@@ -2,7 +2,7 @@ import { OrderItem } from "./../entity/order-item";
 import { Order } from "./../entity/order";
 import { Customer } from "../../customer/entity/customer";
 import { v4 as uuid } from "uuid";
-
+// service são Stateless
 export class OrderService {
   static total(orders: Order[]): number {
     return orders.reduce((acc, order) => acc + order.total(), 0);
