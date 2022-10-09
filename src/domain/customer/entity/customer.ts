@@ -20,9 +20,11 @@ export class Customer {
   get name(): string {
     return this._name;
   }
+
   get rewardPoints(): number {
     return this._rewardPoints;
   }
+
   validate() {
     if (this._id.length === 0) {
       throw new Error("Id is required");
@@ -36,6 +38,11 @@ export class Customer {
     this._name = name;
     this.validate();
   }
+
+  get Address(): Address {
+    return this._address;
+  }
+
   changeAddress(address: Address) {
     this._address = address;
   }
@@ -43,6 +50,7 @@ export class Customer {
   isActive(): boolean {
     return this._active;
   }
+
   activate() {
     if (this._address === undefined) {
       throw new Error("Address is mandatory to activate a customer");
