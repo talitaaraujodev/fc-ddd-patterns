@@ -65,6 +65,7 @@ export class CustomerRepository implements CustomerRepositoryInterface {
 
     const customers = customerModels.map((customerModels: any) => {
       let customer = new Customer(customerModels.id, customerModels.name);
+
       customer.addRewardPoints(customerModels.rewardPoints);
       const address = new Address(
         customerModels.street,
