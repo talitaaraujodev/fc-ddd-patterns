@@ -14,7 +14,7 @@ import {
     tableName: "order_items",
     timestamps: false,
   })
-  export default class OrderItemModel extends Model {
+  export  class OrderItemModel extends Model {
     @PrimaryKey
     @Column
     declare id: string;

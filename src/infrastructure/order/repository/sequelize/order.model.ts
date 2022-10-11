@@ -15,6 +15,7 @@ import OrderItemModel from "./order-item.model";
   timestamps: false,
 })
 export class OrderModel extends Model {
+  [x: string]: OrderItem;
   @PrimaryKey
   @Column
   declare id: string;
@@ -31,4 +32,5 @@ export class OrderModel extends Model {
 
   @Column({ allowNull: false })
   declare total: number;
+  orderModel: OrderItem;
 }
