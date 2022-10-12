@@ -8,7 +8,7 @@ import { CustomerModel } from "../../../customer/repository/sequelize/customer.m
 import { CustomerRepository } from "../../../customer/repository/sequelize/customer.repository";
 import { ProductModel } from "../../../product/repository/sequelize/product.model";
 import ProductRepository from "../../../product/repository/sequelize/product.repository";
-import OrderItemModel from "./order-item.model";
+import {OrderItemModel} from "./order-item.model";
 import { OrderModel } from "./order.model";
 import { OrderRepository } from "./order.repository";
 

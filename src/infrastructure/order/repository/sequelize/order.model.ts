@@ -8,14 +8,13 @@ import {
   HasMany,
 } from "sequelize-typescript";
 import { CustomerModel } from "../../../customer/repository/sequelize/customer.model";
-import OrderItemModel from "./order-item.model";
+import { OrderItemModel } from "./order-item.model";
 
 @Table({
   tableName: "orders",
   timestamps: false,
 })
-export class OrderModel extends Model {
-  [x: string]: OrderItem;
+export  class OrderModel extends Model {
   @PrimaryKey
   @Column
   declare id: string;
@@ -32,5 +31,4 @@ export class OrderModel extends Model {
 
   @Column({ allowNull: false })
   declare total: number;
-  orderModel: OrderItem;
 }
